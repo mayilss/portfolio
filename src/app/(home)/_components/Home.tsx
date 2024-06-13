@@ -1,4 +1,4 @@
-import GlowingBall from "@/components/GlowingBall";
+import GlowingBall from "@/components/ui/GlowingBall";
 
 export default function Home() {
   return (

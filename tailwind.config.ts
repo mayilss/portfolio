@@ -25,6 +25,10 @@ const config: Config = {
       colors: {
         turquoise: "#66d9ed",
         purple: "#740cdc",
+        "purple-dark": "#490C86DE",
+        "purple-darker": "#241d41",
+        gray: "#1a191d",
+        blue: "#2c3599",
       },
       backgroundImage: {
         home: "url('/images/home-bg.jpg')",
@@ -37,9 +41,19 @@ const config: Config = {
           "0%, 100%": { transform: "translateX(-4px)" },
           "50%": { transform: "translateX(4px)" },
         },
+        "accordion-down": {
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
       },
       animation: {
         swing: "swing 2s ease-in-out infinite",
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
       },
     },
   },
