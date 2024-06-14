@@ -8,6 +8,7 @@ export default function Main() {
       <Header />
       <Home />
       <Experience />
+      <section className="h-screen"></section>
     </main>
   );
 }

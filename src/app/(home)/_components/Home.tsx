@@ -1,8 +1,9 @@
 import GlowingBall from "@/components/ui/GlowingBall";
+import PageWrapper from "@/components/ui/PageWrapper";
 
 export default function Home() {
   return (
-    <section className="bg-home bg-cover bg-center relative h-screen w-full flex justify-center items-center">
+    <PageWrapper className="bg-home bg-cover bg-center relative w-full">
       <GlowingBall />
       <div className="flex flex-col items-center">
         <h1 className="text-[9vw] font-extrabold">MAYIL SAFARZADE</h1>
@@ -10,6 +11,6 @@ export default function Home() {
           SOFTWARE ENGINEER, SPECIALIZED IN FRONTEND & REACT.JS
         </h5>
       </div>
-    </section>
+    </PageWrapper>
   );
 }
