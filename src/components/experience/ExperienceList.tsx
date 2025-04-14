@@ -1,5 +1,5 @@
 import ExperienceItem from "./ExperienceItem";
-import { Accordion } from "../ui/Accordion";
+import { Accordion } from "../ui/accordion";
 
 type IProps = {
   experienceData: Array<Experience>;

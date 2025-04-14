@@ -1,6 +1,7 @@
 import Header from "@/components/header/Header";
-import Home from "./_components/Home";
+import Contact from "./_components/Contact";
 import Experience from "./_components/Experience";
+import Home from "./_components/Home";
 
 export default function Main() {
   return (
@@ -8,7 +9,7 @@ export default function Main() {
       <Header />
       <Home />
       <Experience />
-      <section className="h-screen"></section>
+      <Contact />
     </main>
   );
 }

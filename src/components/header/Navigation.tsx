@@ -1,6 +1,6 @@
 import NavItem from "./NavItem";
 
-const items = ["// home", "// experience", "// projects", "// contact"];
+const items = ["home", "experience", "contact"];
 
 export default function Navigation() {
   return (

@@ -3,11 +3,11 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "../ui/Accordion";
+} from "../ui/accordion";
 import { MapPin, SquareArrowOutUpRight } from "lucide-react";
 import { Badge } from "../ui/Badge";
 import Image from "next/image";
-import { formatDate } from "@/lib/utils";
+import { formatDate } from "@/lib/helpers";
 
 type IProps = {
   experience: Experience;
@@ -15,9 +15,9 @@ type IProps = {
 
 export default function ExperienceItem({ experience }: IProps) {
   return (
-    <AccordionItem value={String(experience.id)}>
-      <AccordionTrigger>
-        <div className="flex justify-between items-center w-full">
+    <AccordionItem value={String(experience.id)} className="border-0">
+      <AccordionTrigger className="bg-purple px-5 rounded-lg">
+        <div className="flex justify-around items-center w-full">
           <h5 className="font-bold text-18">
             {experience.jobTitle} @ {experience.companyName}
           </h5>
@@ -28,7 +28,7 @@ export default function ExperienceItem({ experience }: IProps) {
           </p>
         </div>
       </AccordionTrigger>
-      <AccordionContent>
+      <AccordionContent className="bg-purple-darker mt-3 rounded-lg p-5">
         <div className="flex justify-between items-center">
           <div className="space-y-4">
             <div className="flex items-center space-x-8">
@@ -56,7 +56,7 @@ export default function ExperienceItem({ experience }: IProps) {
               ))}
             </div>
           </div>
-          <div className="w-20">
+          <div className="w-20 bg-white">
             <Image
               src={experience.companyLogo}
               alt={experience.companyName}

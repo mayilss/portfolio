@@ -81,7 +81,7 @@ const experienceData: Array<Experience> = [
 
 export default function Experience() {
   return (
-    <PageWrapper className="bg-gray pt-24 px-20 flex-col">
+    <PageWrapper className="bg-gray pt-32 px-20 flex-col justify-start">
       <div className="max-w-[730px] w-full">
         <h2 className="text-6xl mb-10 text-center font-semibold">
           Professional Experience
