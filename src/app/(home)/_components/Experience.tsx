@@ -1,85 +1,15 @@
 import ExperienceList from "@/components/experience/ExperienceList";
 import PageWrapper from "@/components/ui/PageWrapper";
+import { db } from "@/lib/firebase-admin";
+import { type Experience } from "@/models";
 
-const experienceData: Array<Experience> = [
-  {
-    id: 1,
-    companyName: "Bestcomp Group",
-    companyLogo: "/images/bcg-logo.png",
-    companyLocation: "Baku, Azerbaijan",
-    companyWebsite: "https://bestcomp.net/en",
-    jobTitle: "Frontend Engineer",
-    startDate: new Date(2022, 10),
-    endDate: "Present",
-    summary:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero, placeat sapiente necessitatibus molestias magni blanditiis exercitationem aperiam corporis!",
-    stack: [
-      "React",
-      "TypeScript",
-      "TypeScript",
-      "TypeScript",
-      "TypeScript",
-      "TypeScript",
-      "TypeScript",
-      "TypeScript",
-      "TypeScript",
-      "TypeScript",
-      "TypeScript",
-    ],
-  },
-  {
-    id: 2,
-    companyName: "Bestcomp Group",
-    companyLogo: "/images/bcg-logo.png",
-    companyLocation: "Baku, Azerbaijan",
-    companyWebsite: "https://bestcomp.net/en",
-    jobTitle: "Frontend Engineer",
-    startDate: new Date(2022, 10),
-    endDate: "Present",
-    summary:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero, placeat sapiente necessitatibus molestias magni blanditiis exercitationem aperiam corporis!",
-    stack: [
-      "React",
-      "TypeScript",
-      "TypeScript",
-      "TypeScript",
-      "TypeScript",
-      "TypeScript",
-      "TypeScript",
-      "TypeScript",
-      "TypeScript",
-      "TypeScript",
-      "TypeScript",
-    ],
-  },
-  {
-    id: 3,
-    companyName: "Bestcomp Group",
-    companyLogo: "/images/bcg-logo.png",
-    companyLocation: "Baku, Azerbaijan",
-    companyWebsite: "https://bestcomp.net/en",
-    jobTitle: "Frontend Engineer",
-    startDate: new Date(2022, 10),
-    endDate: "Present",
-    summary:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero, placeat sapiente necessitatibus molestias magni blanditiis exercitationem aperiam corporis!",
-    stack: [
-      "React",
-      "TypeScript",
-      "TypeScript",
-      "TypeScript",
-      "TypeScript",
-      "TypeScript",
-      "TypeScript",
-      "TypeScript",
-      "TypeScript",
-      "TypeScript",
-      "TypeScript",
-    ],
-  },
-];
+export default async function Experience() {
+  const snapshot = await db.collection("experience").get();
+  const experienceData: Array<Experience> = snapshot.docs.map((doc) => ({
+    id: doc.id,
+    ...doc.data(),
+  })) as Array<Experience>;
 
-export default function Experience() {
   return (
     <PageWrapper className="bg-gray pt-32 px-20 flex-col justify-start">
       <div className="max-w-[730px] w-full">

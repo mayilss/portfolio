@@ -1,5 +1,6 @@
 import ExperienceItem from "./ExperienceItem";
 import { Accordion } from "../ui/accordion";
+import { Experience } from "@/models";
 
 type IProps = {
   experienceData: Array<Experience>;

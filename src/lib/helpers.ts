@@ -1,5 +1,8 @@
-export function formatDate(date: Date | "Present") {
-  if (date === "Present") return date;
+import { Timestamp } from "firebase-admin/firestore";
+
+export function formatDate(timestamp: Timestamp | "Present") {
+  if (timestamp === "Present") return timestamp;
+  const date = timestamp.toDate();
   const dateString = date.toDateString();
   const dateArray = dateString.split(" ");
   return `${dateArray[1]}, ${dateArray[3]}`;

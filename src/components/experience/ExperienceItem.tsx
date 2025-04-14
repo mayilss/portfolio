@@ -8,6 +8,7 @@ import { MapPin, SquareArrowOutUpRight } from "lucide-react";
 import { Badge } from "../ui/Badge";
 import Image from "next/image";
 import { formatDate } from "@/lib/helpers";
+import { Experience } from "@/models";
 
 type IProps = {
   experience: Experience;
@@ -29,8 +30,8 @@ export default function ExperienceItem({ experience }: IProps) {
         </div>
       </AccordionTrigger>
       <AccordionContent className="bg-purple-darker mt-3 rounded-lg p-5">
-        <div className="flex justify-between items-center">
-          <div className="space-y-4">
+        <div className="flex justify-between items-center gap-x-2">
+          <div className="space-y-4 flex-auto">
             <div className="flex items-center space-x-8">
               <p className="flex items-center space-x-2">
                 <MapPin width="1rem" />
@@ -56,7 +57,7 @@ export default function ExperienceItem({ experience }: IProps) {
               ))}
             </div>
           </div>
-          <div className="w-20 bg-white">
+          <div className="bg-white flex-auto">
             <Image
               src={experience.companyLogo}
               alt={experience.companyName}

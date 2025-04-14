@@ -1,12 +1,14 @@
-interface Experience {
-  id: number;
+import { Timestamp } from "firebase-admin/firestore";
+
+export interface Experience {
+  id: string;
   jobTitle: string;
   companyName: string;
   companyLogo: string;
   companyLocation: string;
   companyWebsite: string;
-  startDate: Date;
-  endDate: Date | "Present";
+  startDate: Timestamp;
+  endDate: Timestamp | "Present";
   summary: string;
   stack: Array<string>;
 }
