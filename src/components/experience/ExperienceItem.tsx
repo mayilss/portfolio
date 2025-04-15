@@ -3,7 +3,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "../ui/accordion";
+} from "../ui/Accordion";
 import { MapPin, SquareArrowOutUpRight } from "lucide-react";
 import { Badge } from "../ui/Badge";
 import Image from "next/image";

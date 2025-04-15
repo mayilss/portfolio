@@ -1,5 +1,5 @@
 import ExperienceItem from "./ExperienceItem";
-import { Accordion } from "../ui/accordion";
+import { Accordion } from "../ui/Accordion";
 import { Experience } from "@/models";
 
 type IProps = {
