@@ -8,6 +8,5 @@ export function formatDate(timestamp: Timestamp | "Present") {
   return `${dateArray[1]}, ${dateArray[3]}`;
 }
 
-export const handleNavItemClick = (pageIndex: number) => {
+export const handleNavItemClick = (pageIndex: number) =>
   scrollTo({ top: pageIndex * window.innerHeight, behavior: "smooth" });
-};

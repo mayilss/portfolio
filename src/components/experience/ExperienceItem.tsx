@@ -19,10 +19,10 @@ export default function ExperienceItem({ experience }: IProps) {
     <AccordionItem value={String(experience.id)} className="border-0">
       <AccordionTrigger className="bg-purple px-5 rounded-lg">
         <div className="flex justify-around items-center w-full">
-          <h5 className="font-bold md:text-18">
+          <h5 className="font-bold text-12 sm:text-14 md:text-18">
             {experience.jobTitle} @ {experience.companyName}
           </h5>
-          <p className="font-bold md:text-18">
+          <p className="font-bold text-12 sm:text-14 md:text-18">
             {`${formatDate(experience.startDate)} - ${formatDate(
               experience.endDate
             )}`}
@@ -45,7 +45,7 @@ export default function ExperienceItem({ experience }: IProps) {
                 target="_blank"
               >
                 <SquareArrowOutUpRight width="1rem" />
-                <span className="text-8 md:text-16 hover:underline">
+                <span className="text-12 md:text-16 hover:underline">
                   {experience.companyWebsite}
                 </span>
               </a>
@@ -53,13 +53,16 @@ export default function ExperienceItem({ experience }: IProps) {
             <p className="text-12 md:text-16">{experience.summary}</p>
             <div className="flex flex-wrap gap-2">
               {experience.stack.map((item, index) => (
-                <Badge key={index} className="bg-blue px-3 py-1 text-14">
+                <Badge
+                  key={index}
+                  className="bg-blue px-3 py-1 text-12 md:text-14"
+                >
                   {item}
                 </Badge>
               ))}
             </div>
           </div>
-          <div className="bg-white flex-auto hidden md:block">
+          <div className="flex-auto hidden sm:block">
             <Image
               src={experience.companyLogo}
               alt={experience.companyName}
