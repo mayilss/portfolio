@@ -11,7 +11,7 @@ export default async function Experience() {
   })) as Array<Experience>;
 
   return (
-    <PageWrapper className="bg-gray pt-32 px-20 flex-col justify-start">
+    <PageWrapper className="bg-gray pt-32 px-20 flex-col justify-start pb-8">
       <div className="max-w-[730px] w-full">
         <h2 className="text-6xl mb-10 text-center font-semibold">
           Professional Experience
