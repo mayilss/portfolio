@@ -4,8 +4,8 @@ import { Github, Linkedin } from "lucide-react";
 export default function Contact() {
   return (
     <PageWrapper className="justify-center px-20 py-24 bg-contact bg-cover bg-start">
-      <div className="w-full h-full flex flex-col justify-between">
-        <div className="text-end">
+      <div className="w-full h-full flex flex-col justify-between space-y-8 xl:space-y-0">
+        <div className="text-center lg:text-end space-y-5 lg:space-y-0">
           <h3 className="text-35 font-bold">
             Available for freelance opportunities
           </h3>
@@ -16,9 +16,12 @@ export default function Contact() {
             Send me an email or contact me via direct message!
           </p>
         </div>
-        <div className="flex flex-col">
+        <div className="flex flex-col items-center lg:items-start">
           <div className="flex items-end h-1 hover:h-9 duration-300 bg-purple w-min my-4">
-            <a href="mailto:mayilsafarzada@gmail.com" className="text-25 mx-1">
+            <a
+              href="mailto:mayilsafarzada@gmail.com"
+              className="text-20 lg:text-25 mx-1"
+            >
               mayilsafarzada@gmail.com
             </a>
           </div>

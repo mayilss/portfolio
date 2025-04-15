@@ -19,10 +19,10 @@ export default function ExperienceItem({ experience }: IProps) {
     <AccordionItem value={String(experience.id)} className="border-0">
       <AccordionTrigger className="bg-purple px-5 rounded-lg">
         <div className="flex justify-around items-center w-full">
-          <h5 className="font-bold text-18">
+          <h5 className="font-bold md:text-18">
             {experience.jobTitle} @ {experience.companyName}
           </h5>
-          <p className="font-bold text-18">
+          <p className="font-bold md:text-18">
             {`${formatDate(experience.startDate)} - ${formatDate(
               experience.endDate
             )}`}
@@ -35,7 +35,9 @@ export default function ExperienceItem({ experience }: IProps) {
             <div className="flex items-center space-x-8">
               <p className="flex items-center space-x-2">
                 <MapPin width="1rem" />
-                <span className="text-16">{experience.companyLocation}</span>
+                <span className="text-12 md:text-16">
+                  {experience.companyLocation}
+                </span>
               </p>
               <a
                 className="flex items-center space-x-2"
@@ -43,12 +45,12 @@ export default function ExperienceItem({ experience }: IProps) {
                 target="_blank"
               >
                 <SquareArrowOutUpRight width="1rem" />
-                <span className="text-16 hover:underline">
+                <span className="text-8 md:text-16 hover:underline">
                   {experience.companyWebsite}
                 </span>
               </a>
             </div>
-            <p>{experience.summary}</p>
+            <p className="text-12 md:text-16">{experience.summary}</p>
             <div className="flex flex-wrap gap-2">
               {experience.stack.map((item, index) => (
                 <Badge key={index} className="bg-blue px-3 py-1 text-14">
@@ -57,7 +59,7 @@ export default function ExperienceItem({ experience }: IProps) {
               ))}
             </div>
           </div>
-          <div className="bg-white flex-auto">
+          <div className="bg-white flex-auto hidden md:block">
             <Image
               src={experience.companyLogo}
               alt={experience.companyName}
