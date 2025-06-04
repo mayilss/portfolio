@@ -16,7 +16,7 @@ type IProps = {
 
 export default function ExperienceItem({ experience }: IProps) {
   return (
-    <AccordionItem value={String(experience.id)} className="border-0">
+    <AccordionItem value={experience.id} className="border-0">
       <AccordionTrigger className="bg-purple px-5 rounded-lg">
         <div className="flex justify-around items-center w-full">
           <h5 className="font-bold text-12 sm:text-14 md:text-18">
